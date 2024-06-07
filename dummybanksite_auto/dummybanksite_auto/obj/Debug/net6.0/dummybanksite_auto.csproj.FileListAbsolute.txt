@@ -1,0 +1,17 @@
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\bin\Debug\net6.0\dummybanksite_auto.deps.json
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\bin\Debug\net6.0\dummybanksite_auto.runtimeconfig.json
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\bin\Debug\net6.0\dummybanksite_auto.dll
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\bin\Debug\net6.0\dummybanksite_auto.pdb
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.csproj.AssemblyReference.cache
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.AssemblyInfoInputs.cache
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.AssemblyInfo.cs
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.csproj.CoreCompileInputs.cache
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.dll
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\refint\dummybanksite_auto.dll
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.pdb
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\dummybanksite_auto.genruntimeconfig.cache
+C:\Users\sreidrobinson\source\repos\techgym\dummybanksite_auto\dummybanksite_auto\obj\Debug\net6.0\ref\dummybanksite_auto.dll

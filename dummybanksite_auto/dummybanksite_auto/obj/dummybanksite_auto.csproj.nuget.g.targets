@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xunit.core\2.8.1\build\xunit.core.targets" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.8.1\build\xunit.core.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.chromedriver\125.0.6422.14100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.chromedriver\125.0.6422.14100\build\Selenium.WebDriver.ChromeDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver\4.21.0\buildTransitive\Selenium.WebDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver\4.21.0\buildTransitive\Selenium.WebDriver.targets')" />
+  </ImportGroup>
+</Project>
