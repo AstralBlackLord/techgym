@@ -37,5 +37,24 @@ namespace DemoBank_version2
 
         }
 
+        [Fact]
+        [Trait("Category", "Smoke")]
+        public void servicesPage()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized");
+            using IWebDriver driver = new ChromeDriver(options);
+            {
+                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
+                Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
+
+                IWebElement servicesLink = driver.FindElement(By.LinkText("Services"));
+                servicesLink.Click();
+                Thread.Sleep(3000);
+                Assert.Equal("https://parabank.parasoft.com/parabank/services.htm", driver.Url);
+            }
+
+        }
+
     }
 }
