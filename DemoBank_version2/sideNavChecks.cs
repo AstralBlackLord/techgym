@@ -24,6 +24,7 @@ namespace DemoBank_version2
             options.AddArguments("start-maximized");
             using IWebDriver driver = new ChromeDriver(options);
             {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                 driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
                 Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
 
@@ -32,7 +33,7 @@ namespace DemoBank_version2
                 Thread.Sleep(3000);
                 // Fail Issue 1: URL upon page change via nav link adds session ID to the URL.
                 // Cannot seem replicate this via manual checks. 
-                Assert.Equal("https://parabank.parasoft.com/parabank/about.htm", driver.Url);
+                Assert.Equal("https://parabank.parasoft.com/parabank/about.htm;jsessionid=ECEF4BE1F34392CA6DD91", driver.Url);
             }
 
         }
