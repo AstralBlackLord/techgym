@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sreidrobinson\\Source\\Repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj": {}
+    "C:\\Users\\sreidrobinson\\source\\repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sreidrobinson\\Source\\Repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj": {
+    "C:\\Users\\sreidrobinson\\source\\repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sreidrobinson\\Source\\Repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj",
+        "projectUniqueName": "C:\\Users\\sreidrobinson\\source\\repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj",
         "projectName": "DemoBank_version2",
-        "projectPath": "C:\\Users\\sreidrobinson\\Source\\Repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj",
+        "projectPath": "C:\\Users\\sreidrobinson\\source\\repos\\techgym\\DemoBank_version2\\DemoBank_version2.csproj",
         "packagesPath": "C:\\Users\\sreidrobinson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sreidrobinson\\Source\\Repos\\techgym\\DemoBank_version2\\obj\\",
+        "outputPath": "C:\\Users\\sreidrobinson\\source\\repos\\techgym\\DemoBank_version2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

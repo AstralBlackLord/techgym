@@ -10,6 +10,7 @@ namespace DemoBank_version2
             options.AddArguments("start-maximized", "--incognito");
             using IWebDriver driver = new ChromeDriver(options);
             {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                 driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
                 Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
             }
@@ -17,7 +18,7 @@ namespace DemoBank_version2
         }
 
         [Fact]
-        [Trait("Category", "Navigation")]
+        [Trait("Category", "Nav")]
         public void aboutPage()
         {
             ChromeOptions options = new ChromeOptions();
@@ -39,7 +40,7 @@ namespace DemoBank_version2
         }
 
         [Fact]
-        [Trait("Category", "Smoke")]
+        [Trait("Category", "Nav")]
         public void servicesPage()
         {
             ChromeOptions options = new ChromeOptions();
@@ -60,5 +61,51 @@ namespace DemoBank_version2
 
         }
 
+        [Fact]
+        [Trait("Category", "Nav")]
+        public void adminPage()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized");
+            using IWebDriver driver = new ChromeDriver(options);
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
+                Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
+
+                IWebElement adminLink = driver.FindElement(By.LinkText("Admin Page"));
+                adminLink.Click();
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+                IWebElement adminLinkAgain = driver.FindElement(By.LinkText("Admin Page"));
+                adminLinkAgain.Click();
+                Assert.Equal("https://parabank.parasoft.com/parabank/admin.htm", driver.Url);
+            }
+
+        }
+
+    }
+
+    public class UIChecks
+    {
+        [Fact]
+        [Trait("Category", "UI")]
+        public void landingPageUIChecks()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized", "--incognito");
+            using IWebDriver driver = new ChromeDriver(options);
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
+                Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
+
+                IWebElement headerPanel = driver.FindElement(By.Id("headerPanel"));
+                Assert.True(headerPanel.Displayed);
+                //simple assertion to see if header is visible
+                //will probably consider another assertion to check if correct image
+                //also considering writing for loop on header button to check if correct number of button visible
+            }
+
+        }
     }
 }
