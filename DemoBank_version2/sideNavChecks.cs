@@ -107,5 +107,40 @@ namespace DemoBank_version2
             }
 
         }
+
+        [Fact]
+        [Trait("Category", "UI")]
+        public void aboutUsUIChecks()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized", "--incognito");
+            using IWebDriver driver = new ChromeDriver(options);
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
+                Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
+
+                IWebElement aboutLink = driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a"));
+                aboutLink.Click();
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+                IWebElement aboutLinkAgain = driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a"));
+                aboutLinkAgain.Click();
+                Assert.Equal("https://parabank.parasoft.com/parabank/about.htm", driver.Url);
+
+                IWebElement titleText = driver.FindElement(By.TagName("h1"));
+                IList<IWebElement> pageText = driver.FindElements(By.TagName("p"));
+                foreach (IWebElement element in pageText)
+                {
+                    Assert.True(element.Displayed);
+                }
+              
+
+
+                //simple assertion to see if all p tag text is visible
+                //will write assertion that checks paragraphs in displaying right text
+            }
+
+        }
+
     }
 }
