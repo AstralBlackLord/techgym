@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace DemoBank_version2
 {
     public class sideNavChecks
@@ -120,11 +122,9 @@ namespace DemoBank_version2
                 driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
                 Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
 
-                IWebElement aboutLink = driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a"));
-                aboutLink.Click();
+                driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a")).Click();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                IWebElement aboutLinkAgain = driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a"));
-                aboutLinkAgain.Click();
+                driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a")).Click();
                 Assert.Equal("https://parabank.parasoft.com/parabank/about.htm", driver.Url);
 
                 IWebElement titleText = driver.FindElement(By.TagName("h1"));
@@ -133,7 +133,6 @@ namespace DemoBank_version2
                 {
                     Assert.True(element.Displayed);
                 }
-              
 
 
                 //simple assertion to see if all p tag text is visible
@@ -142,5 +141,21 @@ namespace DemoBank_version2
 
         }
 
+        [Fact]
+        [Trait("Category", "Smoke")]
+        public void test()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized", "--incognito");
+            using IWebDriver driver = new ChromeDriver(options);
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
+                Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
+                //test
+                //test
+            }
+
+        }
     }
 }
