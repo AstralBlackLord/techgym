@@ -146,12 +146,21 @@ namespace DemoBank_version2
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                 driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
                 Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
-                //test
-                //test
-                //test commit
-                //test commit 2
-                //test commit 3
-                //test commit 4
+            }
+
+        }
+
+        [Fact]
+        [Trait("Category", "Smoke")]
+        public void test2()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized", "--incognito");
+            using IWebDriver driver = new ChromeDriver(options);
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
+                Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
             }
 
         }
