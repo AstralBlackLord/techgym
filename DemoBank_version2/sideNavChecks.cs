@@ -31,11 +31,9 @@ namespace DemoBank_version2
                 driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
                 Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
 
-                IWebElement aboutLink = driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a"));
-                aboutLink.Click();
+                driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a")).Click();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                IWebElement aboutLinkAgain = driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a"));
-                aboutLinkAgain.Click(); 
+                driver.FindElement(By.XPath("//*[@id=\"headerPanel\"]/ul[1]/li[2]/a")).Click(); 
                 Assert.Equal("https://parabank.parasoft.com/parabank/about.htm", driver.Url);
             }
 
@@ -53,11 +51,9 @@ namespace DemoBank_version2
                 driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
                 Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
 
-                IWebElement servicesLink = driver.FindElement(By.LinkText("Services"));
-                servicesLink.Click();
+                driver.FindElement(By.LinkText("Services")).Click();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                IWebElement servicesLinkAgain = driver.FindElement(By.LinkText("Services"));
-                servicesLinkAgain.Click();
+                driver.FindElement(By.LinkText("Services")).Click();
                 Assert.Equal("https://parabank.parasoft.com/parabank/services.htm", driver.Url);
             }
 
@@ -75,11 +71,9 @@ namespace DemoBank_version2
                 driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
                 Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
 
-                IWebElement adminLink = driver.FindElement(By.LinkText("Admin Page"));
-                adminLink.Click();
+                driver.FindElement(By.LinkText("Admin Page")).Click();
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                IWebElement adminLinkAgain = driver.FindElement(By.LinkText("Admin Page"));
-                adminLinkAgain.Click();
+                driver.FindElement(By.LinkText("Admin Page")).Click();
                 Assert.Equal("https://parabank.parasoft.com/parabank/admin.htm", driver.Url);
             }
 
