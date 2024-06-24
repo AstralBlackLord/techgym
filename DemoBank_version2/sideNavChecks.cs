@@ -79,6 +79,26 @@ namespace DemoBank_version2
 
         }
 
+        [Fact]
+        [Trait("Category", "Nav")]
+        public void registerPage()
+        {
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized");
+            using IWebDriver driver = new ChromeDriver(options);
+            {
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/index.htm");
+                Assert.Equal("https://parabank.parasoft.com/parabank/index.htm", driver.Url);
+
+                driver.FindElement(By.LinkText("Register")).Click();
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+                driver.FindElement(By.LinkText("Register")).Click();
+                Assert.Equal("https://parabank.parasoft.com/parabank/register.htm", driver.Url);
+            }
+
+        }
+
     }
 
     public class UIChecks
