@@ -128,6 +128,11 @@ namespace DemoBank_version2
                     Assert.True(element.Displayed);
                 }
 
+                IWebElement bodytext = driver.FindElement(By.Id("rightPanel"));
+                Assert.Contains("ParaBank is a demo site used for demonstration of Parasoft software solutions.\r\nAll materials herein are used solely for simulating a realistic online banking website.", bodytext.Text);
+                Assert.Contains("In other words: ParaBank is not a real bank!", bodytext.Text);
+                Assert.Contains("For more information about Parasoft solutions please visit us at:\r\nwww.parasoft.com or call 888-305-0041", bodytext.Text);
+
 
                 //simple assertion to see if all p tag text is visible
                 //will write assertion that checks paragraphs in displaying right text
@@ -164,5 +169,7 @@ namespace DemoBank_version2
             }
 
         }
+
+
     }
 }
